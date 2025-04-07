@@ -1,0 +1,127 @@
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?ga=GA1.1.1073011411.1743850381&semt=ais_hybrid&w=740") no-repeat center center/cover;
+}
+.teacher-dashboard {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #f9fbfd;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.teacher-dashboard h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.teacher-dashboard p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.logout-button {
+  display: block;
+  margin: 10px auto 20px;
+  padding: 8px 16px;
+  background-color: #e74c3c;
+  color: #cd0f0f;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+.vehicle-register-section, .vehicle-list-section {
+  margin-top: 30px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.vehicle-register-section h3,
+.vehicle-list-section h3 {
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.vehicle-register-section form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.vehicle-register-section input,
+.vehicle-register-section select {
+  padding: 8px;
+  font-size: 14px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.vehicle-register-section button {
+  padding: 8px 16px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.vehicle-register-section button:hover {
+  background-color: #219150;
+}
+
+.vehicle-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vehicle-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background: #f4f6f8;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.vehicle-item span {
+  font-size: 14px;
+}
+
+.delete-button {
+  align-self: flex-start;
+  margin-top: 6px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}

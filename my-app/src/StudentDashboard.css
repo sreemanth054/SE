@@ -1,0 +1,82 @@
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?ga=GA1.1.1073011411.1743850381&semt=ais_hybrid&w=740") no-repeat center center/cover;
+  }
+  .dashboard-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .dashboard-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dashboard-info {
+    margin-bottom: 1.5rem;
+  }
+  
+  .dashboard-info p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 0.5rem;
+    color: #007bff;
+  }
+  
+  .bus-select-dropdown {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  .logout-button{
+    background-color: #e60c0c;
+    color: white;
+  }
+  .bus-register-button,
+  .bus-details-button,
+  .logout-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background-color: #1274dd;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bus-register-button:hover,
+  .bus-details-button:hover,
+  .logout-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .bus-detail-view {
+    background-color: #e9f5ff;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+  
+  .bus-detail-view p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+  }

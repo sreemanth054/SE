@@ -1,0 +1,347 @@
+/* Global Styles */
+body {
+  background-image: url("https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?ga=GA1.1.1073011411.1743850381&semt=ais_hybrid&w=740");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+}
+
+/* Variables for consistent theming */
+:root {
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --danger-color: #dc3545;
+  --danger-dark: #b52b3a;
+  --success-color: #28a745;
+  --success-dark: #218838;
+  --warning-color: #ffc107;
+  --warning-dark: #e0a800;
+  --text-dark: #2c3e50;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* Outer Container */
+.admin-dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: clamp(20px, 5vw, 40px) clamp(10px, 2vw, 20px);
+}
+
+/* Card Layout */
+.admin-dashboard-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.admin-dashboard-header {
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+/* Admin Content */
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.admin-options {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.admin-options button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-options button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.admin-options button.active {
+  background-color: var(--primary-dark);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.allocation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center-align the items */
+  gap: 12px;
+  max-width: 400px;
+  margin: 20px auto; /* center the form horizontally */
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.allocation-form input,
+.allocation-form select,
+.allocation-form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease;
+}
+
+.allocation-form input:focus,
+.allocation-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.allocation-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.allocation-form button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Logout Section */
+.logout-container {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
+
+.logout-button {
+  
+  background-color: var(--danger-color);
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.logout-button:hover {
+  background-color: var(--danger-dark);
+  transform: scale(1.05);
+}
+
+/* Main Content */
+.admin-content {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  background: white;
+}
+
+thead {
+  background-color: #f8f9fa;
+  color: var(--text-dark);
+}
+
+td, th {
+  border: 1px solid #e9ecef;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+/* Hide Occupied Column */
+td.occupied,
+th.occupied {
+  display: none;
+}
+
+/* Action Buttons */
+button.bus-button,
+button.edit-button,
+button.delete-button {
+  padding: 0.5rem 0.5rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+button.bus-button {
+  background-color: var(--success-color);
+  margin: 0.3rem;
+}
+
+button.bus-button:hover {
+  background-color: var(--success-dark);
+  transform: translateY(-2px);
+}
+
+button.edit-button {
+  background-color: rgb(0, 0, 0);
+}
+
+button.edit-button:hover {
+  background-color: var(--warning-dark);
+  transform: translateY(-2px);
+}
+
+button.delete-button {
+  background-color: var(--danger-color);
+}
+
+button.delete-button:hover {
+  background-color: var(--danger-dark);
+  transform: translateY(-2px);
+}
+
+.edit-delete-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Parking Section Buttons */
+.parking-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.parking-buttons button {
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.parking-buttons button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Allocate Slot Form */
+.allocate-slot-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.allocate-slot-form input,
+.allocate-slot-form select {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+/* Override Slot Table */
+.override-slot-table {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .admin-dashboard-card {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .admin-options button,
+  button.bus-button,
+  button.edit-button,
+  button.delete-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  td, th {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .parking-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .allocate-slot-form {
+    padding: 1rem;
+  }
+
+  .edit-delete-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .logout-container {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .logout-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
